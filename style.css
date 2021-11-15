@@ -1,0 +1,239 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+/* Colours */
+@import url("https://saco.ml/colours.css");
+
+* {
+  font-family: "Inter", Inter, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  font-size: 20px;
+}
+
+h1, h2, h3 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  line-height: 1.25;
+}
+
+p {
+  margin: 1px 0;
+}
+
+* + h1,
+* + h2, 
+* + h3 {
+  margin: 25px 0 10px 0;
+}
+
+small {
+  color: var(--darkGrey);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a, button {
+  cursor: pointer;
+  outline: none;
+}
+
+tag {
+  display: inline-block;
+  background: var(--red);
+  border: 1px solid var(--lightGrey);
+  border-radius: 50px;
+  padding: 5px 15px;
+  margin: 0 10px 10px 0;
+  color: white;
+  font-size: 0.75em;
+  font-weight: 500;
+}
+
+tag[boosted] {
+  background: var(--purple);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+tag[account] {
+  background: var(--blue);
+}
+
+tag + h2 {
+  margin: 10px 0 0 0;
+}
+
+#top {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  content-align: center;
+  text-align: center;
+  background: radial-gradient(152% 336.06% at -18.25% -3.5%, #2255DD 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(47.89% 97.5% at 73% 97.5%, #8822DD 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 185.71% at 100% 0%, #22DD55 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
+  padding: 100px;
+  height: 100vh;
+  width: 100%;
+}
+
+#top > div {
+  width: 100%;
+}
+
+#top h1 {
+  margin: 0;
+  color: white;
+  font-size: 48px;
+  line-height: 1;
+  word-break: break-word;
+}
+
+#top button {
+  background: white;
+  border: none;
+  border-radius: 99px;
+  padding: 10px 25px;
+  margin: 25px 0 0 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#navHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+#nav {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+  text-align: center;
+  z-index: 10;
+}
+
+#nav #logo {
+  color: white;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+#nav button {
+  background: #ffffff32;
+  border: none;
+  border-radius: 99px;
+  padding: 7.5px 15px;
+  margin: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+#content > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 650px));
+  grid-gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+#content > div:nth-child(even) {
+  background: var(--superlightGrey);
+}
+
+#content > div:nth-child(even) *:first-child {
+  grid-column: 2;
+}
+
+#content > div:nth-child(even) *:last-child {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#content h1 {
+  font-size: 48px;
+}
+
+#content img {
+  width: 100%;
+}
+
+#ready {
+  padding: 150px 100px;
+  text-align: center;
+}
+
+#ready button {
+  background: var(--blue);
+  border: none;
+  border-radius: 99px;
+  padding: 10px 25px;
+  margin: 5px 0 0 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--superlightGrey);
+  border-top: 1px solid var(--lightGrey);
+  padding: 25px;
+  margin: 0 auto;
+  color: var(--superdarkGrey);
+  text-align: center;
+  text-decoration: none;
+}
+
+#footer svg {
+  fill: var(--superdarkGrey);
+}
+
+#footer span {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  #top {
+    padding: 50px;
+  }
+  
+  #content > div {
+    grid-template-columns: 1fr;
+    padding: 50px;
+  }
+  
+  #content > div:nth-child(even) *:first-child {
+    grid-column: initial;
+  }
+
+  #content > div:nth-child(even) *:last-child {
+    grid-column: initial;
+    grid-row: initial;
+  }
+  
+  #ready {
+    padding: 150px 50px;
+  }
+}
