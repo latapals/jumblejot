@@ -6,234 +6,238 @@
 @import url("https://saco.ml/colours.css");
 
 * {
-  font-family: "Inter", Inter, sans-serif;
-  line-height: 1.5;
+  font-family: Inter, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-size: 20px;
+  background: grey;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-top: calc(100vh - 100px);
 }
 
-h1, h2, h3 {
-  font-size: 40px;
+h1 {
+  font-size: 36px;
   font-weight: 600;
-  margin: 0 0 15px 0;
-  line-height: 1.25;
+  margin-bottom: 0.5em;
 }
 
-p {
-  margin: 1px 0;
-}
-
-* + h1,
-* + h2, 
-* + h3 {
-  margin: 25px 0 10px 0;
-}
-
-small {
-  color: var(--darkGrey);
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-a, button {
+button {
+  background: #2255dd;
+  border: none;
+  border-radius: 99px;
+  padding: 12px 25px;
+  color: white;
+  font-size: 1em;
+  transition: 0.2s;
   cursor: pointer;
   outline: none;
 }
 
-tag {
-  display: inline-block;
-  background: var(--red);
-  border: 1px solid var(--lightGrey);
-  border-radius: 50px;
-  padding: 5px 15px;
-  margin: 0 10px 10px 0;
-  color: white;
-  font-size: 0.75em;
-  font-weight: 500;
-}
-
-tag[boosted] {
-  background: var(--purple);
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-tag[account] {
-  background: var(--blue);
-}
-
-tag + h2 {
-  margin: 10px 0 0 0;
+button:hover {
+  transform: scale(1.05);
 }
 
 #top {
-  box-sizing: border-box;
+  background: white;
   display: flex;
   align-items: center;
-  content-align: center;
-  text-align: center;
-  background: radial-gradient(152% 336.06% at -18.25% -3.5%, #2255DD 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(47.89% 97.5% at 73% 97.5%, #8822DD 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 185.71% at 100% 0%, #22DD55 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF;
-  padding: 100px;
-  height: 100vh;
-  width: 100%;
-}
-
-#top > div {
-  width: 100%;
-}
-
-#top h1 {
-  margin: 0;
-  color: white;
-  font-size: 48px;
-  line-height: 1;
-  word-break: break-word;
-}
-
-#top button {
-  background: white;
-  border: none;
-  border-radius: 99px;
-  padding: 10px 25px;
-  margin: 25px 0 0 0;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-#navHolder {
-  position: absolute;
+  justify-content: center;
+  position: fixed;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100vw;
+  right: 0;
+  padding: 75px;
+}
+
+body > *:not(#top) {
+  position: relative;
+  z-index: 2;
 }
 
 #nav {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
-  align-content: center;
   justify-content: space-between;
-  padding: 20px 25px;
-  text-align: center;
-  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 75px 75px 0 75px;
+  margin: 0 auto;
+  max-width: 900px;
 }
 
-#nav #logo {
-  color: white;
+#nav > span:last-child {
+  display: flex;
+  grid-gap: 2em;
+}
+
+#nav a {
+  color: #696969;
+  text-decoration: none;
+}
+
+#logo {
+  display: flex;
+  align-item: center;
+  grid-gap: 20px;
+}
+
+a#logo {
+  color: black;
+}
+
+#logo svg {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+#logo:hover path {
+  stroke-dasharray: 30;
+  animation: logo 1s infinite;
+}
+
+@keyframes logo {
+  from {
+    stroke-dashoffset: 60;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#logo span {
+  font-size: 20px;
   font-weight: 600;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.5;
 }
 
-#nav button {
-  background: #ffffff32;
-  border: none;
-  border-radius: 99px;
-  padding: 7.5px 15px;
-  margin: 0;
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
+#title {
+  text-align: center;
+}
+
+#title h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 0.75em;
+}
+
+#preview {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+  background: white;
+  padding: 0 50px 50px 50px;
+}
+
+#preview img {
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px 0 #00000032;
 }
 
 #content {
   display: flex;
   flex-direction: column;
+  background: white;
 }
 
-#content > div {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 650px));
-  grid-gap: 50px;
-  align-items: center;
-  justify-content: center;
-  padding: 100px;
-}
-
-#content > div:nth-child(even) {
-  background: var(--superlightGrey);
-}
-
-#content > div:nth-child(even) *:first-child {
-  grid-column: 2;
-}
-
-#content > div:nth-child(even) *:last-child {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-#content h1 {
-  font-size: 48px;
+#content p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #696969;
 }
 
 #content img {
+  border-radius: 16px;
+  margin-top: 50px;
   width: 100%;
+  max-width: 700px;
+}
+
+#content > div {
+  padding: 100px;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+#content > div:nth-child(even) {
+  background: #696969;
+  color: white;
+}
+
+#content > div:nth-child(even) p {
+  color: #f5f5f5;
+}
+
+#content > div > small {
+  display: block;
+}
+
+#content > div > small a {
+  color: inherit;
 }
 
 #ready {
-  padding: 150px 100px;
+  background: white;
+  padding: 200px 100px;
   text-align: center;
 }
 
-#ready button {
-  background: var(--blue);
-  border: none;
-  border-radius: 99px;
-  padding: 10px 25px;
-  margin: 5px 0 0 0;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
+#ready h1 {
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 #footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--superlightGrey);
-  border-top: 1px solid var(--lightGrey);
-  padding: 25px;
-  margin: 0 auto;
-  color: var(--superdarkGrey);
+  background: white;
+  padding: 0 75px 75px 75px;
   text-align: center;
+}
+
+#footer a {
+  color: #afafaf;
   text-decoration: none;
 }
 
-#footer svg {
-  fill: var(--superdarkGrey);
-}
-
-#footer span {
-  font-size: 14px;
-  text-decoration: none;
-}
-
-@media only screen and (max-width: 900px) {
-  #top {
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 28px;
+  }
+  
+  #top, #content > div {
     padding: 50px;
   }
   
-  #content > div {
-    grid-template-columns: 1fr;
-    padding: 50px;
+  #nav {
+    justify-content: center;
   }
   
-  #content > div:nth-child(even) *:first-child {
-    grid-column: initial;
+  #nav > span:last-child {
+    display: none;
   }
-
-  #content > div:nth-child(even) *:last-child {
-    grid-column: initial;
-    grid-row: initial;
+  
+  #title h1 {
+    font-size: 2em;
+  }
+  
+  #content img {
+    border-radius: 8px;
+    margin-top: 25px;
   }
   
   #ready {
-    padding: 150px 50px;
+    padding: 100px 50px; 
   }
 }
