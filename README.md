@@ -10,21 +10,21 @@ Jumblejot is an web-based application that allows users to fine-tune their docum
 
 ## Features
 
-[![Easy Editor](https://cdn.discordapp.com/attachments/922659329188958260/961453491237294132/EasyEditor.png)](https://jumblejot.glitch.me/)
+[![Easy Editor](https://cdn.discordapp.com/attachments/909201180465438751/961468241102917652/EE.png#gh-light-mode-only)](https://jumblejot.glitch.me/)
 
 **Easy Editor makes editing your files a breeze. A quite customizable one at that.**
 
 Easy Editor is a feature within Jumblejot that offers the most integrated workflow in the editor. In the Easy Editor, you are full able to change the weight, leading, colour, and other formatting options when working with text. This opens a whole new world of beautiful writing and note-taking. Gain access to exclusive features and highly streamlined projects by using this feature when it is released. 
 
 ______
-[![Marketplace](https://cdn.discordapp.com/attachments/922659329188958260/961453491468005426/Marketplace.png)](https://jumblejot.glitch.me/)
+[![Marketplace](https://cdn.discordapp.com/attachments/909201180465438751/961472259426500658/Marketplace.png#gh-light-mode-only)](https://jumblejot.glitch.me/)
 
 **Marketplace adds highly integrated applications to Jumblejot.**
 
 The Jumblejot Marketplace is a feature that enables community teamwork in creating unique apps. Non-saco products can be intuitivley incorporated into the Jumblejot ecosystem, creating a personal, more involved user experience. Apps can be turned on and off at the press of a button through the Marketplace, where you can explore user created apps for Jumblejot. Developers who are willing to develop apps for the Marketplace will be supplied with the necessary code and documentation to do so.
 
 ______
-[![Customization](https://cdn.discordapp.com/attachments/922659329188958260/961453490918539375/Customization.png)](https://jumblejot.glitch.me/)
+[![Customization](https://cdn.discordapp.com/attachments/909201180465438751/961472259632025660/Personal.png#gh-light-mode-only)](https://jumblejot.glitch.me/)
 
 **Jumblejot offers advanced customization options, for the side of you that just wants to put their feet up and call Jumblejot home.**
 
