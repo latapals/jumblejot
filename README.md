@@ -1,4 +1,4 @@
-[![Jumblejot](https://cdn.discordapp.com/attachments/961707346365657099/962441637911494666/AltRevThin.png)](https://jumblejot.glitch.me/) 
+[![Jumblejot](/assets/AltRevThin.png)](https://jumblejot.glitch.me/) 
 
 # Welcome to Jumblejot.
 Jumblejot is an web-based application that allows users to fine-tune their document editing experience. Jumblejot has created multiple innovative ways to create, edit, and share files. Using Jumblejot offers next-level elegance in code editing, due to its smooth design and easy-to use editors. The [Sargent Coding](https://saco.ml) team is efficient in eliminating the need for clunky features, supplying our users with the cleanest experience in the web. 
@@ -16,19 +16,22 @@ Within Jumblejot's settings, the user is able to adjust specific settings that c
 
 With the Early Access Programme you can test and explore new things that we make. Join the Sargent Coding EAP for exclusive news about upcoming updates.
 
-[<img src="https://cdn.discordapp.com/attachments/961707346365657099/964720213855731763/EAP.png" width="700"/>](https://saco.ml/eap)
+[<img src="assets/EAP.png" width="700"/>](https://saco.ml/eap)
 
 ###### The Sargent Coding EAP requires user access to Discord.
 
+<!-- Patreon -->
 ## Donate
 
 Jumblejot is currently a free tool, and always will be. Developers like us won't always have the money to pay for their free projects. So, if you enjoy our product, or you want to support the development of it, please consider donating to the Sargent Coding Patreon. Your donation will go towards the development process of our projects.
 
-[<img src="https://cdn.discordapp.com/attachments/961707346365657099/964712410969686016/Donate.png" width="700"/>](https://www.patreon.com/saco)
+[<img src="assets/Donate.png" width="700"/>](https://www.patreon.com/saco)
 
 ###### Sargent Coding is a not-profit group, and we promise that all money donated will fund current and future projects. !!!
 
 ---
+
+<!-- Footer, think we should expand? -->
 
 ###### Made by [those who dare to go beyond imagination.](https://github.com/sargent-coding)
 
