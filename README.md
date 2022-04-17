@@ -1,5 +1,9 @@
+<div align="center">
+  
 [![Jumblejot](/assets/AltRevThin.png)](https://jumblejot.glitch.me/) 
-
+  
+<div align="left">
+  
 # Welcome to Jumblejot.
 Jumblejot is an web-based application that allows users to fine-tune their document editing experience. Jumblejot has created multiple innovative ways to create, edit, and share files. Using Jumblejot offers next-level elegance in code editing, due to its smooth design and easy-to use editors. The [Sargent Coding](https://saco.ml) team is efficient in eliminating the need for clunky features, supplying our users with the cleanest experience in the web. 
 ### Easy Editor
