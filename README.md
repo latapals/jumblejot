@@ -11,7 +11,7 @@ Easy Editor is a feature within Jumblejot that offers the most integrated workfl
 ### Personalisation
 Jumblejot offers advanced customization options, for the side of you that just wants to put their feet up and call Jumblejot home.
 
-Within Jumblejot's settings, the user is able to adjust specific settings that can make the editor their own. For example, you are able to create your own color schemes, change the background, change the size of text, the default font, etc. The list goes on. We are sick of apps that take away that abilityand make you pay money for it. That's why we want to supply our users with an application that really feels like their own.
+Within Jumblejot's settings, the user is able to adjust specific settings that can make the editor their own. For example, you are able to create your own color schemes, change the background, change the size of text, the default font, etc. The list goes on. We are sick of apps that take away that ability and make you pay money for it. That's why we want to supply our users with an application that really feels like their own.
 
 <!-- EAP -->
 # Early Access
