@@ -25,17 +25,18 @@ With the Early Access Programme you can test and explore new things that we make
 ###### The Sargent Coding EAP requires user access to Discord.
 
 <!-- Patreon -->
-## Donate
+# Donate
 
 Jumblejot is currently a free tool, and always will be. Developers like us won't always have the money to pay for their free projects. So, if you enjoy our product, or you want to support the development of it, please consider donating to the Sargent Coding Patreon. Your donation will go towards the development process of our projects.
 
+<!-- Patreon Link -->
 [<img src="assets/Donate.png" width="700"/>](https://www.patreon.com/saco)
 
 ###### Sargent Coding is a not-profit group, and we promise that all money donated will fund current and future projects. !!!
 
-# License
+## License
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/sargent-coding/jumblejot">Jumblejot</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://saco.ml">Sargent Coding</a> is licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-ND 4.0
+###### <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/sargent-coding/jumblejot">Jumblejot</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://saco.ml">Sargent Coding</a> is licensed under <a href="http://creativecommons.org/licenses/by-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-ND 4.0
   
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
  
