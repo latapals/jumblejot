@@ -1,6 +1,6 @@
 <div align="center">
   
-[![Jumblejot](/assets/AltRevThin.png)](https://jumblejot.glitch.me/) 
+[<img src="/assets/AltRevThin.png">](https://jumblejot.glitch.me/) 
   
 <div align="left">
   
