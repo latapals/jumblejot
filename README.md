@@ -13,17 +13,6 @@ Jumblejot offers advanced customization options, for the side of you that just w
 
 Within Jumblejot's settings, the user is able to adjust specific settings that can make the editor their own. For example, you are able to create your own color schemes, change the background, change the size of text, the default font, etc. The list goes on. We are sick of apps that take away that ability and make you pay money for it. That's why we want to supply our users with an application that really feels like their own.
 
-<!-- EAP -->
-# Early Access
-
-### Become an early tester.
-
-With the Early Access Programme you can test and explore new things that we make. Join the Sargent Coding EAP for exclusive news about upcoming updates.
-
-[<img src="assets/EAP.png" width="700"/>](https://saco.ml/eap)
-
-###### The Sargent Coding EAP requires user access to Discord.
-
 <!-- Patreon -->
 # Donate
 
