@@ -5,7 +5,7 @@
 <div align="left">
   
 # Welcome to Jumblejot.
-Jumblejot is an web-based application that allows users to fine-tune their document editing experience. Jumblejot has created multiple innovative ways to create, edit, and share files. Using Jumblejot offers next-level elegance in code editing, due to its smooth design and easy-to use editors. The [Sargent Coding](https://saco.ml) team is efficient in eliminating the need for clunky features, supplying our users with the cleanest experience in the web. 
+Jumblejot is an web-based application that allows users to fine-tune their document editing experience. Jumblejot has created multiple innovative ways to create, edit, and share files. Using Jumblejot offers next-level elegance in code editing, due to its smooth design and easy-to use editors. The [Latapals](https://saco.dev) team is efficient in eliminating the need for clunky features, supplying our users with the cleanest experience in the web. 
 ### Easy Editor
 Easy Editor is a feature within Jumblejot that offers the most integrated workflow in the editor. In the Easy Editor, you are full able to change the weight, leading, colour, and other formatting options when working with text. This opens a whole new world of beautiful writing and note-taking. Gain access to exclusive features and highly streamlined projects by using this feature when it is released. 
 ### Personalisation
