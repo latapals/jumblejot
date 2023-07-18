@@ -1,7 +1,7 @@
 Jumblejot is a years-long (since Summer 2021) project to create a file editor that is simple and user-friendly, yet also powerful and versatile.
 
 ### Planned features
-* At its core: The ability to create plaintext files
+* At its core: Plaintext file editing
 * A playground for HTML/CSS/JS snippets
 * A Markdown document editor
 * An image editor?
