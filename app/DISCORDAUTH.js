@@ -22,7 +22,7 @@
     document.body.style.display = "none"
     let randomString = generateRandomString()
     localStorage.setItem('oauth-state', randomString)
-    location.href = `https://discord.com/oauth2/authorize?client_id=924829035308146810&redirect_uri=https://snowtrail.jumblejot.pages.dev/app&response_type=token&scope=identify%20email%20guilds&state=${btoa(randomString)}`
+    location.href = `https://discord.com/oauth2/authorize?client_id=924829035308146810&redirect_uri=https://snowtrail.jumblejot.pages.dev/app/&response_type=token&scope=identify%20email%20guilds&state=${btoa(randomString)}`
   }
 
   console.log(tokenType, accessToken)
