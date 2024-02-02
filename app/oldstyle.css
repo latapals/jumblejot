@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter;
+}
+
+kbd > span {
+  background: #eee;
+  border-radius: 8px;
+  padding: 5px;
+  font-size: 0.9em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto repeat(auto-fill, 1fr);
+  height: 100vh;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #ddd;
+  max-height: 100vh;
+  width: 250px;
+}
+
+#sidebar.MINIMISED {
+  width: unset;
+}
+
+#sidebar > * {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+#sidebar #files {
+  overflow: auto;
+}
+
+#sidebar button {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  color: #111;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+#sidebar button:hover {
+  background: #0000000d;
+  cursor: pointer;
+}
+
+#sidebar button saco-icon {
+  height: 16px;
+  flex-shrink: 0;
+}
+
+#sidebar button div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#sidebar.MINIMISED button > *:not(saco-icon) {
+  display: none;
+}
+
+#sidebar button.folder + div {
+  display: grid;
+  margin-left: 15px;
+}
+
+#sidebar button.folder saco-icon:last-child {
+  height: 12px;
+  transition: 0.25s;
+}
+
+#sidebar button.folder.hidden + div {
+  display: none;
+}
+
+#sidebar button.folder.hidden saco-icon:last-child {
+  transform: rotate(90deg);
+}
+
+#sidebar.MINIMISED button.folder {
+  display: none;
+}
+
+#sidebar.MINIMISED button.folder + div {
+  margin-left: 0;
+}
+
+#workspace {
+  --percent: 75%;
+  display: flex;
+}
+
+#workspace > * {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+#workspace.row {
+  flex-direction: row;
+}
+
+#workspace.row #divider {
+  cursor: ew-resize;
+}
+
+#workspace.row.reverse {
+  flex-direction: row-reverse;
+}
+
+#workspace.row *:first-child {
+  width: var(--percent);
+}
+
+#workspace.row *:last-child {
+  width: calc(100% - var(--percent));
+}
+
+#workspace.column {
+  flex-direction: column;
+}
+
+#workspace.column #divider {
+  cursor: ns-resize;
+}
+
+#workspace.column.reverse {
+  flex-direction: column-reverse;
+}
+
+#workspace.column *:first-child {
+  height: var(--percent);
+}
+
+#workspace.column *:last-child {
+  height: calc(100% - var(--percent));
+}
+
+#textarea {
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  padding: 50px;
+  font-family: monospace;
+  font-size: 16px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  tab-size: 2;
+  outline: none;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  padding: 4px;
+  height: unset;
+  width: unset;
+  transition: 0.2;
+}
+
+#divider > * {
+  background: #aaa;
+  border-radius: 2px;
+  min-height: 4px;
+  min-width: 4px;
+  height: 50%;
+  width: 50%;
+}
+
+#divider:hover {
+  background: #ddd;
+}

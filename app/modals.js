@@ -1,0 +1,7 @@
+let modals = {
+
+  open: (name) => {
+    
+  }
+  
+}

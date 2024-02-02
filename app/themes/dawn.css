@@ -1,0 +1,85 @@
+:root {
+  /* Remember that variables can change depending on what element they are in */
+  --base: #2a222d;
+  --on-base: white;
+  --sidebar: #382a3b;
+  --on-sidebar: white;
+  --border: #47394c;
+  --accent: white;
+  --on-accent: var(--on-base); /* Change --on-accent in #sidebar */
+  --surface: #39303d;
+  --on-surface: white;
+}
+
+#sidebar {
+  --selected: #47394c;
+  --hover: var(--selected);
+}
+
+.CodeMirror {
+  font-family: "SF Mono","Monaco","Andale Mono","Lucida Console","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+  font-size: 12px;
+  line-height: 1.4em;
+}
+
+.CodeMirror .CodeMirror-cursor {
+  border-left: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: #f7ed7e;
+}
+
+.CodeMirror .CodeMirror-selected {
+	background: #404347;
+}
+
+.CodeMirror .cm-string {
+	color: #f5eea2;
+}
+
+.CodeMirror .cm-number {
+	color: #ed6e55;
+}
+
+.CodeMirror .cm-keyword {
+	color: #bc70fd;
+}
+
+.CodeMirror .cm-def {
+  background: #fdc50220;
+  border-radius: 2px;
+  padding: 1px 2px;
+  color: #fdc502;
+}
+
+.CodeMirror .cm-comment {
+	color: #4e6a87;
+}
+
+.CodeMirror .cm-variable-2 {
+	color: #2795ee;
+}
+
+.CodeMirror .cm-property {
+	color: #6ce890;
+}
+
+.CodeMirror .cm-operator {
+	color: #ff4f68;
+}
+
+.CodeMirror .cm-tag {
+  color: #ff4f68;
+}
+
+.CodeMirror .cm-attribute {
+  color: #f8b068;
+}
+
+.CodeMirror .cm-atom {
+  color: #7561ff;
+}
+
+.CodeMirror .cm-builtin, .CodeMirror .cm-qualifier {
+  color: #f8b068;
+}

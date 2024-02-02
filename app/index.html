@@ -1,0 +1,331 @@
+<!--
+
+Jumblejot 0.3.0
+Made with 🥰 by Sargent Coding
+
+-->
+
+<link rel="manifest" href="/manifest.json">
+
+<!--<script>
+  console.log("hi there")
+  console.log(launchQueue.setConsumer)
+  console.log(launchParams)
+  launchQueue.setConsumer(async (launchParams) => {
+  console.log("balls")
+  console.log(launchParams)
+  for (let file of launchParams.files) {
+    let blob = await file.getFile()
+    blob.handle = file
+    let response = await blob.text()
+    console.log(file.name, {
+      content: response,
+      created: blob.lastModified,
+      lastEdited: blob.lastModified
+    })
+  }
+})</script>-->
+
+<script type=module>
+  import {MatchDecorator} from "https://cdn.skypack.dev/@codemirror/view"
+
+  const placeholderMatcher = new MatchDecorator({
+    regexp: /\[\[(\w+)\]\]/g,
+    decoration: match => Decoration.replace({
+      widget: new PlaceholderWidget(match[1]),
+    })
+  })
+
+  import {Decoration, EditorView, ViewPlugin, ViewUpdate} from "https://cdn.skypack.dev/@codemirror/view"
+
+  var placeholders = ViewPlugin.fromClass(/** @class */ (function () {
+    function class_1(view) {
+        this.placeholders = placeholderMatcher.createDeco(view);
+    }
+    class_1.prototype.update = function (update) {
+        this.placeholders = placeholderMatcher.updateDeco(update, this.placeholders);
+    };
+    return class_1;
+}()), {
+    decorations: function (instance) { return instance.placeholders; },
+    provide: function (plugin) { return EditorView.atomicRanges.of(function (view) {
+        var _a;
+        return ((_a = view.plugin(plugin)) === null || _a === void 0 ? void 0 : _a.placeholders) || Decoration.none;
+    }); }
+});
+
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/foldgutter.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.js" defer></script>
+<script src="https://codemirror.net/2/lib/util/formatting.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/display/autorefresh.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/foldcode.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/foldgutter.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/brace-fold.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/xml-fold.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/indent-fold.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/markdown-fold.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/fold/comment-fold.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/mode/overlay.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/edit/closebrackets.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/addon/edit/matchbrackets.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/javascript/javascript.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/xml/xml.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/css/css.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/htmlmixed/htmlmixed.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/python/python.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/markdown/markdown.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/gfm/gfm.min.js" defer></script>
+
+<!--<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6" defer></script>-->
+<script src="https://www.desmos.com/api/v1.7/calculator.js?apiKey=c06818c11d194448973faf4df2d127b9" defer></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.2/math.min.js"></script>
+
+<head>
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <title>Jumblejot</title>
+  <link rel="manifest" href="/manifest.json">
+  
+  <script src="DISCORDAUTH.js" defer></script>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/gh/sargent-coding/icons@3.0.8/icons.js" defer></script>
+  
+  <script src="zz.js" defer></script>
+  <script src="settings.js" defer></script>
+  
+  <script src="/app/workspace.js" defer></script>
+  <script src="files.js" defer></script>
+  <script src="editors.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="translations.js"></script>
+  <script src="cmdk.js" defer></script>
+  <script src="3.js"></script>
+
+  <script src="shortcuts.js"></script>
+
+  <meta name="title" content="Jumblejot">
+  <meta name="description" content="Productivity made simple">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jumblejot">
+  <meta property="og:description" content="Productivity made simple">
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/428417441/a505cde9-0013-4d90-821a-2db7aebf369a">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Jumblejot">
+  <meta property="twitter:description" content="Productivity made simple">
+  <meta property="twitter:image" content="https://repository-images.githubusercontent.com/428417441/a505cde9-0013-4d90-821a-2db7aebf369a">
+</head>
+
+<dialog id="dialog-create-file">
+  <form method="dialog">
+    <section>
+      <h2>Create file</h2>
+      <label>
+        Name
+        <input data-for="name" placeholder="File name">
+      </label>
+    </section>
+    <section>
+      <button class="button--inline" data-for="cancel">Cancel</button>
+      <button data-for="submit">
+        Create file
+      </button>
+    </section>
+  </form>
+</dialog>
+
+<dialog id="dialog-rename">
+  <form method="dialog">
+    <section>
+      <h2>Rename file</h2>
+      <input data-for="name" placeholder="File name">
+    </section>
+    <section>
+      <button class="button--inline" data-for="cancel">Cancel</button>
+      <button data-for="submit">
+        Rename file
+      </button>
+    </section>
+  </form>
+</dialog>
+
+<dialog id="dialog-delete-file">
+  <form method="dialog">
+    <section>
+      <h2>Delete file</h2>
+      <p>Are you sure you want to delete <span data-for="name"></span>? This cannot be undone.</p>
+    </section>
+    <section>
+      <button class="button--inline" data-for="cancel">Cancel</button>
+      <button data-for="submit">
+        Delete file
+      </button>
+    </section>
+  </form>
+</dialog>
+
+<dialog id="dialog-upload">
+  <form id="dialog-upload-1">
+    <section>
+      <h2>Upload</h2>
+      <section class="dialog-section--choose">
+        <label>
+          <input type="radio" name="type" value="file">
+          <div><saco-icon name="file"></saco-icon> File</div>
+        </label>
+        <label>
+          <input type="radio" name="type" value="folder">
+          <div><saco-icon name="folder"></saco-icon> Folder</div>
+        </label>
+        <label>
+          <input type="radio" name="type" value="web">
+          <div><saco-icon name="globe"></saco-icon> Web</div>
+        </label>
+      </section>
+    </section>
+    <section>
+      <button class="button--inline" data-for="cancel">Cancel</button>
+      <button data-for="next">
+        Next
+      </button>
+    </section>
+  </form>
+  <form id="dialog-upload-2" method="dialog">
+    <section>
+      <h2>Upload from the internet</h2>
+      <label>
+        File URL
+        <input data-for="url" placeholder="https://domain.tld/file.ext">
+      </label>
+    </section>
+    <section>
+      <button class="button--inline" data-for="back">Back</button>
+      <button data-for="submit">
+        Fetch!
+      </button>
+    </section>
+  </form>
+</dialog>
+
+<div id="settingsPages" hidden>
+  <div id="settingsPages-shortcuts">
+    <table><tbody><tr><td>New file</td><td>⌘ + N</td></tr><tr><td>Duplicate file</td><td>⌘ + D</td></tr><tr><td>Rename file</td><td>⌘ + R</td></tr><tr><td>Export file</td><td>⌘ + E</td></tr><tr><td>Delete file</td><td>⌘ + ⇧ + ⌫</td></tr><tr><td>Command menu</td><td>⌘ + K</td></tr></tbody></table>
+    <input type="checkbox"><input>
+  </div>
+
+  <div id="settingsPages-language">
+    <h1>Language</h1>
+    <div class="settings-cards">
+      <div class="settings-cards-card">
+        <saco-icon name="translate"></saco-icon>
+        <div class="settings-cards-card-info">
+          <div>Language</div>
+        </div>
+        <div class="settings-cards-card-actions">
+          <select>
+            <option>English</option>
+            <option>Español</option>
+            <option>日本</option>
+          </select>
+        </div>
+      </div>
+      <div class="settings-cards-card">
+        <saco-icon name="clock"></saco-icon>
+        <div class="settings-cards-card-info">
+          <div>Time format</div>
+        </div>
+        <div class="settings-cards-card-actions">
+          <select>
+            <option data-translation="SIDEBAR_VIEW_ALL"></option>
+            <option>12-hour</option>
+            <option>24-hour</option>
+          </select>
+        </div>
+      </div>
+      <div class="settings-cards-card">
+        <saco-icon name="calendar"></saco-icon>
+        <div class="settings-cards-card-info">
+          <div>Date format</div>
+        </div>
+        <div class="settings-cards-card-actions">
+          <select>
+            <option>29 Jan 2016</option>
+            <option>29/01/2016</option>
+            <option>Jan 29 2016</option>
+            <option>01/29/2016</option>
+            <option>2016-01-29</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="settingsPages-dictionary">
+  
+  </div>
+</div>
+
+<dialog id="cmdk">
+  <div id="cmdk-content">
+    <input id="cmdk-input" autocomplete="off" placeholder="What do you need?" data-translation-placeholder="What do you need?">
+    <div id="cmdk-main">
+      <div class="cmdk-main-noResults">
+        
+        <svg width="75" height="75" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M74 37.5C74 57.2252 57.6775 73.25 37.5 73.25C17.3225 73.25 1 57.2252 1 37.5C1 17.7748 17.3225 1.75 37.5 1.75C57.6775 1.75 74 17.7748 74 37.5Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M14.625 22.5C22.875 25.125 27.375 22.5 31.5 16.5M49.5 18C52.875 25.125 57 25.125 63.375 25.125" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.5007 31.125C21.404 24.535 30.1456 23.1468 36.3757 28.5C42.3737 33.6538 41.5334 42.7553 36.3757 48.75C31.0801 54.905 24.3754 56.0153 17.6254 51.375C10.8755 46.7347 12.1297 36.9996 16.5007 31.125Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M47.6259 28.5C40.5322 33.0532 38.7315 45.7405 45.0009 51.375C51.5117 57.2264 61.8533 52.8405 64.8757 44.625C66.8887 39.1532 65.2504 32.8208 61.8757 30C58.5009 27.1792 52.6789 25.2567 47.6259 28.5Z" stroke="currentColor" stroke-width="2"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.5 37.125C40.5 43.5453 35.4632 48.75 29.25 48.75C23.0368 48.75 18 43.5453 18 37.125C18 30.7047 23.0368 25.5 29.25 25.5C35.4632 25.5 40.5 30.7047 40.5 37.125ZM20.2499 35.6251C18.598 33.2557 20.9491 30.3377 23.6249 29.2501C26.3008 28.1624 29.0419 27.8633 30.375 30.375C31.708 32.8867 29.6552 35.7329 26.9999 36.75C24.3445 37.7671 21.6004 37.5621 20.2499 35.6251ZM31.1253 42.75C29.6254 43.3183 27.8119 44.8502 28.5003 46.5C29.1887 48.1498 31.0749 48.245 32.6253 47.625C34.1756 47.0049 36.2508 45.575 35.6253 43.875C34.9998 42.175 32.6251 42.1816 31.1253 42.75Z" fill="currentColor"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M66 38.625C66 45.0453 60.9632 50.25 54.75 50.25C48.5368 50.25 43.5 45.0453 43.5 38.625C43.5 32.2047 48.5368 27 54.75 27C60.9632 27 66 32.2047 66 38.625ZM47.2498 35.6249C45.7494 33.3749 47.9087 31.1794 49.8745 30C51.8403 28.8207 54.375 28.5005 55.8748 30.7501C57.342 32.9508 54.1443 34.865 52.9512 35.5792L52.8748 35.625C51.7496 36.3001 48.7502 37.8749 47.2498 35.6249ZM57.3755 43.8751C56.17 44.667 55.5001 46.125 56.2502 47.625C57.0004 49.125 58.418 48.922 59.6261 48.375C61.1176 47.6997 62.4831 45.5599 61.5007 44.25C60.6221 43.0785 58.5995 43.071 57.3755 43.8751Z" fill="currentColor"/>
+        <path d="M27 62.625C27 62.625 28.1263 60.9634 29.25 60.75C30.7313 60.4687 32.625 62.625 32.625 62.625C32.625 62.625 33.75 60.75 35.625 60.375C37.5 60.0001 39.375 61.875 39.375 61.875C39.375 61.875 40.9857 60.7414 42.375 60.75C43.9522 60.7597 45.75 62.25 45.75 62.25C45.75 62.25 46.875 61.125 48.375 61.125C49.875 61.125 51.75 63.375 51.75 63.375" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.75 40.5C7.125 41.625 5.625 43.125 2.625 48.75L7.125 57.75C12.75 63.75 23.25 59.25 24.75 54.375C17.625 53.25 12 47.25 12.75 40.5Z" fill="currentColor" fill-opacity="0.5"/>
+        <path d="M71.25 51.375C70.125 47.625 67.875 45.75 65.25 43.875C63 51 58.5 54.375 48 53.625C49.5 60.375 57.75 64.5 65.25 61.125L71.25 51.375Z" fill="currentColor" fill-opacity="0.5"/>
+        </svg>
+        
+        There's nothing here.</div>
+      <span id="cmdk-sections-maths-header" class="cmdk-section-header">Calculator</span>
+      <span id="cmdk-sections-maths" class="cmdk-section">
+      </span>
+      <span id="cmdk-sections-files-header" class="cmdk-section-header">Files</span>
+      <div id="cmdk-sections-files" class="cmdk-section"></div>
+      <span id="cmdk-sections-actions-header" class="cmdk-section-header">Actions</span>
+      <div id="cmdk-sections-actions" class="cmdk-section"></div>
+    </div>
+  </div>
+</dialog>
+
+<main>
+  <section id="sidebar">
+    <nav>
+      <button><saco-icon name="folder"></saco-icon><span selected data-translation="SIDEBAR_VIEW_ALL"></span></button>
+      <button id="sidebar-new" class="button--action"><saco-icon name="plus"></saco-icon></button>
+      <button id="sidebar-more" class="button--action"><saco-icon name="ellipsis"></saco-icon></button>
+    </nav>
+    <div id="sidebar-files"></div>
+  </section>
+  <section id="workspace">
+    <nav>
+      <button id="nav-sidebar" class="button--action"><saco-icon name="panel.left"></saco-icon></button>
+      <span data-translation="CURRENT_PAGE"></span>
+
+      <button id="t-rename" class="button--action tempbutton"><saco-icon name="rename"></saco-icon></button>
+      <button id="t-duplicate" class="button--action tempbutton"><saco-icon name="copy"></saco-icon></button>
+      <button id="t-delete" class="button--action tempbutton"><saco-icon name="rubbishBin"></saco-icon></button>
+      <button id="t-upload" class="button--action tempbutton"><saco-icon name="import"></saco-icon></button>
+      <button id="t-export" class="button--action tempbutton"><saco-icon name="save"></saco-icon></button>
+      <button id="t-settings" class="button--action tempbutton"><saco-icon name="settings"></saco-icon></button>
+      
+      <button id="nav-share" class="button--action"><saco-icon name="share"></saco-icon></button>
+      <button id="nav-favourite" class="button--action"><saco-icon name="star"></saco-icon></button>
+      <button id="nav-more" class="button--action"><saco-icon name="ellipsis"></saco-icon></button>
+    </nav>
+    <section>
+      <section class="codeMirrorWrapper"></section>
+    </section>
+  </section>
+</main>

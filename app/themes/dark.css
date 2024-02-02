@@ -1,0 +1,74 @@
+:root {
+  --base: #191919;
+  --on-base: #aaa;
+  --on-base-minor: #888;
+  --on-base-placeholder: #666;
+  --sidebar: var(--base);
+  --on-sidebar: var(--on-base);
+  --border: #555;
+  --accent: var(--on-base);
+  --on-accent: var(--base);
+  --surface: #292929;
+  --on-surface: var(--on-base);
+  --selected: var(--surface);
+  --on-selected: var(--on-surface);
+  --hover: var(--surface);
+  --on-hover: var(--on-surface);
+}
+
+.CodeMirror .CodeMirror-selected {
+	background: #404347;
+}
+
+.CodeMirror .cm-string {
+	color: #ff5779;
+}
+
+.CodeMirror .cm-string-2 {
+  color: #ff8e3f;
+}
+
+.CodeMirror .cm-number {
+	color: #20e093;
+}
+
+.CodeMirror .cm-keyword {
+	color: #e074f0;
+}
+
+.CodeMirror .cm-def {
+  color: #2795ee;
+}
+
+.CodeMirror .cm-comment {
+	-color: #4e6a87;
+  opacity: 0.75;
+}
+
+.CodeMirror .cm-variable-2 {
+	color: #4fb9ff;
+}
+
+.CodeMirror .cm-property {
+	color: #6ce890;
+}
+
+.CodeMirror .cm-operator {
+	color: #ff4f68;
+}
+
+.CodeMirror .cm-tag {
+  color: #00ee80;
+}
+
+.CodeMirror .cm-attribute {
+  color: #2795ee;
+}
+
+.CodeMirror .cm-atom {
+  color: #9988ff;
+}
+
+.CodeMirror .cm-builtin, .CodeMirror .cm-qualifier {
+  color: #f8b068;
+}

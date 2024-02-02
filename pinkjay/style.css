@@ -1,0 +1,129 @@
+@import url('https://rsms.me/inter/inter-display.css');
+@import url('./elements.css');
+@import url('/app/themes/chrome-devtools.css');
+
+:root {
+  /* Remember that variables can change depending on what element they are in */
+  --base: white;
+  --on-base: #111;
+  --on-base-minor: #777;
+  --on-base-placeholder: #aaa;
+  --sidebar: white;
+  --on-sidebar: #111;
+  --border: 1px solid var(--border-colour);
+  --border-over: rgba(0, 0, 0, 0.135);
+  --border-colour: #ddd;
+  --accent: #17f;
+  --on-accent: var(--base); /* Change --on-accent in #sidebar */
+  --surface: #eee;
+  --on-surface: #111;
+  --selected: var(--surface);
+  --on-selected: var(--on-surface);
+  --hover: var(--surface);
+  --on-hover: var(--on-surface);
+
+  --font-sans: 'InterDisplay var', Inter, sans-serif;
+  --font-mono: monospace;
+
+  --shadow-overlay: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  --curve-bounce: cubic-bezier(.21,1.45,.58,1.01);
+
+  --sidebar-width: 300px;
+}
+
+*, :focus {
+  transition: outline-color 0.25s, outline-offset 0.25s;
+  outline: none;
+  outline-color: transparent;
+}
+
+.using-tab :focus {
+  outline: 2px solid transparent;
+  outline-color: var(--accent);
+  outline-offset: 3px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  font-variation-settings: "opsz" 32;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar-holder {
+  display: grid;
+  padding: 0;
+  transition: 0.4s margin, 0.4s padding;
+  z-index: 3;
+}
+
+main.minimised #sidebar-holder  {
+  margin-left: calc(-1 * var(--sidebar-width) - 15px);
+  margin-right: -15px;
+  padding: 15px;
+}
+
+main.minimised #sidebar-holder:hover {
+  margin-left: 0px;
+  margin-right: calc(-1 * var(--sidebar-width) - 30px);
+}
+
+#sidebar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-right: 1px solid #ddd;
+  width: var(--sidebar-width);
+  transition: 0.4s border-radius;
+}
+
+main.minimised #sidebar {
+  border: var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow-overlay);
+}
+
+#workspace {
+  width: 100%;
+}
+
+section nav {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border);
+  padding: 10px;
+  height: 60px;
+}
+
+#sidebar nav > *:first-child {
+  width: 100%;
+}
+
+#sidebar-files {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#sidebar-files button {
+  justify-content: start;
+  overflow: hidden;
+}
+
+#sidebar-files button > span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

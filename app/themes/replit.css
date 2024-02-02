@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css');
+
+:root {
+  /* Remember that variables can change depending on what element they are in */
+  --base: #1c2333;
+  --on-base: #c2c8cc;
+  --sidebar: #1c2333;
+  --on-sidebar: #c2c8cc;
+  --border: #47394c;
+  --accent: #004182;
+  --on-accent: #b2d9ff; /* Change --on-accent in #sidebar */
+  --surface: #2b3245;
+  --on-surface: white;
+  --selected: #0079f2;
+  --on-selected: white;
+
+  --font-sans: "IBM Plex Sans", monospace;
+  --font-mono: Hack, monospace;
+}
+
+body, button {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+main {
+  box-sizing: border-box;
+  background: #0e1525;
+  padding: 8px;
+  gap: 8px;
+}
+
+main > * {
+  border-radius: 8px;
+}
+
+main > section {
+  background: var(--base);
+}
+
+#sidebar {
+  border-right: none;
+}
+
+three-editor > *:nth-child(1) {
+  padding: 4px;
+}
+
+three-editor > *:nth-child(1) > * {
+  gap: 4px;
+}
+
+three-editor > *:nth-child(1) button {
+  border-radius: 8px;
+  padding: 0 10px;
+  height: 25px;
+  gap: 8px;
+}
+
+three-editor > *:nth-child(1) button.selected {
+  --selected: #2b3245;
+}
+
+.CodeMirror {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #f5f9fc;
+}
+
+.CodeMirror-linenumber {
+  color: #9da2a6;
+}
+
+.CodeMirror .CodeMirror-cursor {
+  border-left-color: #0079f2;
+  border-left-width: 2px;
+  border-radius: 2px;
+}
+
+.CodeMirror .CodeMirror-selected {
+	background: #004182;
+}
+
+.CodeMirror .cm-activeLine {
+  background: #242a3c;
+}
+
+.CodeMirror .cm-string {
+	color: #ffbd7a;
+}
+
+.CodeMirror .cm-number {
+	color: #c4e581;
+}
+
+.CodeMirror .cm-keyword {
+	color: #57abff;
+}
+
+.CodeMirror .cm-def {
+  color: #f5f9fc;
+}
+
+.CodeMirror .cm-comment {
+	color: #009118;
+}
+
+.CodeMirror .cm-variable-2 {
+	color: #2795ee;
+}
+
+.CodeMirror .cm-property {
+	color: #b2d9ff;
+}
+
+.CodeMirror .cm-operator {
+	color: #b2d9ff;
+}
+
+.CodeMirror .cm-tag {
+  color: #57abff;
+}
+
+.CodeMirror .cm-attribute {
+  color: #ffbd7a;
+}
+
+.CodeMirror .cm-atom {
+  color: #57abff;
+}
+
+.CodeMirror .cm-builtin, .CodeMirror .cm-qualifier {
+  color: #f8b068;
+}

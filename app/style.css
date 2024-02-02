@@ -1,0 +1,686 @@
+@import url('https://rsms.me/inter/inter-display.css');
+
+@import url('/app/themes/chrome-devtools.css');
+
+:root {
+  /* Remember that variables can change depending on what element they are in */
+  --base: white;
+  --on-base: #111;
+  --on-base-minor: #777;
+  --on-base-placeholder: #aaa;
+  --sidebar: white;
+  --on-sidebar: #111;
+  --border: #ddd;
+  --accent: #17f;
+  --on-accent: var(--base); /* Change --on-accent in #sidebar */
+  --surface: #eee;
+  --on-surface: #111;
+  --selected: var(--surface);
+  --on-selected: var(--on-surface);
+  --hover: var(--surface);
+  --on-hover: var(--on-surface);
+
+  --font-sans: 'InterDisplay var', Inter, sans-serif;
+  --font-mono: monospace;
+}
+
+*, :focus {
+  transition: outline-color 0.25s, outline-offset 0.25s;
+  outline: none;
+  outline-color: transparent;
+}
+
+.using-tab :focus {
+  outline: 2px solid transparent;
+  outline-color: var(--accent);
+  outline-offset: 3px;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  font-variation-settings: "opsz" 32;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background: var(--base);
+  height: 100vh;
+  color: var(--on-base);
+  overflow: hidden;
+}
+
+main > section {
+  display: grid;
+  align-content: start;
+  overflow: hidden;
+}
+
+[disabled] {
+  opacity: 0.5;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:not(.button--inline), input:not([type=radio]), select {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12.5px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0 12.5px;
+  height: 40px;
+  min-width: 40px;
+  color: inherit;
+  font-family: inherit;
+  font-variation-settings: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: inherit;
+}
+
+::placeholder {
+  color: var(--on-base-placeholder);
+  opacity: 1;
+}
+
+button saco-icon {
+  font-size: 16px;
+}
+
+button.button--round {
+  border-radius: 9999px;
+  padding: 15px;
+}
+
+button.button--inline {
+  background: none;
+  border: none;
+  border-radius: none;
+  font-family: inherit;
+  font-variation-settings: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+button.button--action {
+  background: none;
+  border: none;
+  width: 40px;
+}
+
+button.button--file {
+  justify-content: start;
+  background: none;
+  border: none;
+  overflow: hidden;
+}
+
+button.button--file > span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+button:hover.not(.button--inline) {
+  background: var(--hover);
+  color: var(--on-hover);
+}
+
+button:not(.button--inline).selected {
+  background: var(--selected);
+  color: var(--on-selected);
+}
+
+dialog {
+  background: var(--sidebar);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0;
+  width: 500px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--on-sidebar);
+  user-select: none;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, .5);
+}
+
+dialog > form {
+  margin: 0;
+}
+
+dialog button:not(.button--inline), dialog input:not([type=radio]), dialog select {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0 15px;
+  height: 45px;
+  min-width: 45px;
+  color: var(--on-base);
+  font-family: inherit;
+  font-variation-settings: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: inherit;
+}
+
+dialog > form > section:first-child {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  padding: 25px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+dialog > form > section h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+dialog > form > section p {
+  margin: -10px 0 0 0;
+  line-height: 1.5;
+}
+
+dialog > form > section label {
+  display: grid;
+  gap: 10px;
+  color: var(--on-base-minor);
+}
+
+dialog section section {
+  display: grid;
+  grid-gap: 15px;
+}
+
+dialog > form > section label.label--inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+dialog > form > section .dialog-section--choose {
+  grid-gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+dialog > form > section .dialog-section--choose label {
+  color: var(--on-base);
+}
+
+dialog > form > section .dialog-section--choose input {
+  display: none;
+}
+
+dialog > form > section .dialog-section--choose input:checked + div {
+  background: var(--surface);
+}
+
+dialog > form > section .dialog-section--choose div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-weight: 500;
+}
+
+dialog > form > section .dialog-section--choose > *:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+#dialog-delete-file [data-for="name"] {
+  font-weight: 600;
+}
+
+dialog > form > section:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 25px;
+  border-top: 1px solid var(--border);
+  padding: 15px 25px;
+}
+
+dialog > form > section:last-child button:not(.button--inline) {
+  background: var(--accent);
+  border-color: transparent;
+  border-radius: 99px;
+  padding: 10px 25px;
+  color: var(--on-accent);
+  height: 40px;
+}
+
+dialog > form > section:last-child a {
+  cursor: pointer;
+}
+
+dialog[open], dialog.in {
+  animation: 0.5s cubic-bezier(.21,1.45,.58,1.01) modal-open;
+}
+
+dialog[open]::backdropm dialog-in::backdrop {
+  animation: 0.5s modal-open-backdrop;
+}
+
+dialog.out, dialog.closing {
+  animation: none;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s cubic-bezier(calc(1 - .21), calc(1 - 1.45), calc(1 - .58), calc(1 - 1.01));
+  transition-property: opacity, transform;
+  pointer-events: none;
+}
+
+dialog.closing::backdrop {
+  opacity: 0;
+  transition: 0.5s;
+  transition-property: opacity;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modal-open-backdrop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-close {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+
+@keyframes modal-close-backdrop {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#cmdk {
+  width: 75vw;
+  max-width: 750px;
+  overflow: hidden;
+}
+
+#cmdk-main {
+  display: grid;
+}
+
+#cmdk-input {
+  border: none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0 25px;
+  height: 65px;
+  width: 100%;
+  font-feature-settings: "frac" 1, "tnum" 1, "calt" 1;
+  font-size: 18px;
+  outline: none;
+}
+
+#cmdk-main {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.cmdk-main-button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 8px;
+  padding: 0 15px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.cmdk-main-button.selected {
+  background: var(--hover);
+  color: var(--on-hover);
+}
+
+.cmdk-section {
+  display: grid;
+}
+
+.cmdk-section-header {
+  color: var(--on-base-minor);
+  font-size: 15px;
+  margin: 15px 15px 0 15px;
+}
+
+.cmdk-main-noResults {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 300px;
+  color: var(--on-base-placeholder);
+}
+
+#cmdk-sections-maths .cmdk-main-button:not(.cmdk-sections-maths-normal) {
+  height: auto;
+  padding: 7.5px 15px;
+  font-feature-settings: "frac" 1, "tnum" 1, "calt" 1;
+  font-size: 30px;
+}
+
+.settings-cards {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-cards-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px 25px;
+}
+
+.settings-cards-card > saco-icon {
+  font-size: 20px;
+}
+
+.settings-cards-card-info {
+  flex: 1;
+}
+
+nav {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 10px;
+  height: 60px;
+}
+
+#sidebar {
+  box-sizing: border-box;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  margin-left: 0px;
+  width: 300px;
+  color: var(--on-sidebar);
+  transition: 0.5s;
+  transition-property: margin-left;
+}
+
+#sidebar.closed {
+  margin-left: -300px;
+}
+
+#sidebar nav > *:first-child {
+  justify-content: start;
+  width: 100%;
+}
+
+#sidebar-files {
+  display: grid;
+  padding: 10px;
+  overflow: auto;
+}
+
+#sidebar-files .folder {
+  display: grid;
+}
+
+#sidebar-files .folder > div {
+  display: grid;
+  margin-left: 25px;
+}
+
+#sidebar-files .folder saco-icon {
+  transition: transform cubic-bezier(.21,1.45,.58,1.01) 0.5s;
+}
+
+#sidebar-files .folder.closed > button saco-icon {
+  transform: scale(1.3) rotate(-90deg);
+}
+
+#sidebar-files .folder.closed > div {
+  display: none;
+}
+
+section nav button:not(.button--inline),
+section nav input,
+section nav select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  justify-content: center;
+  background: none;
+  border: none;
+}
+
+#workspace {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+#workspace iframe {
+  background: white;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.CodeMirror {
+  background: var(--base);
+  color: var(--on-base);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.codeMirrorWrapper .codeMirror {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.codeMirrorWrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.CodeMirror-cursor {
+  border-color: var(--on-base);
+}
+
+.CodeMirror-gutters {
+  background: none;
+  border: none;
+}
+
+#workspace > nav {
+  overflow: hidden;
+}
+
+#workspace > nav [data-translation="CURRENT_PAGE"] {
+  padding: 10px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#workspace > section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+#workspace > section > *:not(:last-child) {
+  border-right: 1px solid var(--border);
+}
+
+#workspace .settingsPage {
+  padding: 100px;
+  min-height: 100%;
+}
+
+.fullscreen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--base);
+  z-index: 9999;
+}
+
+@media print {
+  #workspace > section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 100%;
+    background: var(--base);
+    z-index: 9999;
+  }
+
+  #workspace > section * {
+    overflow: hidden;
+  }
+
+  #workspace .codeMirrorWrapper .codeMirror {
+    position: unset;
+    height: auto;
+  }
+
+  #workspace .CodeMirror-hscrollbar, #workspace .CodeMirror-vscrollbar {
+    display: none;
+  }
+}
+
+.dcg-calculator-api-container [class^="dcg-icon-"]:not(.dcg-popover-interior *):not(.dcg-icon-desmos), .dcg-calculator-api-container [class*=" dcg-icon-"], .dcg-icon {
+  line-height: unset;
+}
+
+i.dcg-icon {
+  line-height: unset !important;
+}
+
+.dcg-default-border {
+  border: none !important;
+}
+
+three-editor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+}
+
+three-editor > * {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+three-editor > *:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 3;
+
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  overflow: auto;
+}
+
+three-editor:not(.fullscreen) > *:nth-child(1) {
+  padding: 0;
+}
+
+three-editor > *:nth-child(1) > * {
+  display: flex;
+  align-items: center;
+}
+
+three-editor > *:nth-child(1) button {
+  flex: none;
+
+  border-radius: 99px;
+  padding: 0 15px;
+}
+
+three-editor:not(.fullscreen) > *:nth-child(1) button {
+  border-radius: 0;
+  padding: 0 20px;
+  font-size: 13px;
+}
+
+three-editor > *:nth-child(2) {
+  grid-area: 2 / 1 / 3 / 2;
+
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr));
+  gap: 1px;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+three-editor > *:nth-child(2) > * {
+  height: 100%;
+}
+
+three-editor > *:nth-child(2) > *:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+three-editor > *:nth-child(3) { grid-area: 2 / 2 / 3 / 3; }

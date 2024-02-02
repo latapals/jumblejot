@@ -1,0 +1,33 @@
+input, select, button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  border-radius: 10px;
+  padding: 0 10px;
+  height: 40px;
+  min-width: 40px;
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+}
+
+.button.action {
+  background: var(--surface);
+  border-radius: 9999px;
+  padding: 0 25px;
+  font: inherit;
+  color: var(--on-surface);
+}
+
+.button.action.primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+select:hover, .button.tab:hover, .button.action:hover {
+  background: var(--hover);
+  color: var(--on-hover);
+}
